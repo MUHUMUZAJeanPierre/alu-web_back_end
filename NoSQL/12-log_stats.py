@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-""" 12. Log stats
+""" 12. Log stats .
 """
 
 
