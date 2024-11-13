@@ -3,10 +3,7 @@ const fs = require('fs');
 function countStudents(path) {
   try {
     const data = fs.readFileSync(path, { encoding: 'utf8' });
-    const lines = data
-      .split('\n')
-      .filter((line) => line.length > 0)
-      .slice(1);
+    const lines = data.split('\n').filter((line) => line.length > 0).slice(1);
     const fields = lines.map((line) => line.split(','));
     const fieldNames = fields.map((field) => field[3]).flat();
     const uniqueFieldNames = [...new Set(fieldNames)];
